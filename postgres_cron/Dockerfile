@@ -14,7 +14,7 @@ ENV PG_CRON_VERSION           "1.4.2"
 #######################################################################
 # Prepare the build requirements for the rdkit compilation:
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    postgresql-server-dev-all postgresql-contrib \
+    postgresql-server-dev-15 postgresql-contrib \
     libcurl4-openssl-dev \
     wget jq cmake build-essential ca-certificates && \
 # Install pg_cron:
