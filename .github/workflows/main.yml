@@ -3,15 +3,10 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   compile:
-    name: Run Docker build
     runs-on: ubuntu-latest
+    name: Compile as you see it
     steps:
-      - name: Check out the repo
-        uses: actions/checkout@v2
-      - name: Run the build process with Docker
-        uses: addnab/docker-run-action@v3
-        with:
-          image: ./postgres_cron/Dockerfile
-          # options: -v ${{ github.workspace }}:/var/www
-          run: |
-            -d ramazanpolat/postgres_cron:15
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Hello world action step
+        uses: ./ # Uses an action in the root directory
