@@ -3,4 +3,4 @@ name: 'PG Time'
 description: 'Compile weird stuff'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'postgres_cron/Dockerfile'
